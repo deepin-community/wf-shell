@@ -1,0 +1,2 @@
+option('examples', type: 'boolean', value: false, description: 'Build example applications')
+option('docs', type: 'boolean', value: false, description: 'Build devhelp API documentation')
