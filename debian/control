@@ -1,15 +1,26 @@
-Source: template-repository
-Section: unknown
+Source: wf-shell
+Section: x11
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: rewine <lhongxu@outlook.com>
+Build-Depends: debhelper-compat (= 13),
+               libwf-config-dev,
+               wayfire-dev,
+               libwlroots-dev (>= 0.16),
+               libwayland-dev,
+               libgtkmm-3.0-dev,
+               meson,
+               cmake,
+               pkg-config,
+Standards-Version: 4.6.0
+Homepage: https://wayfire.org/
+#Vcs-Browser: https://salsa.debian.org/debian/wf-shell
+#Vcs-Git: https://salsa.debian.org/debian/wf-shell.git
+Rules-Requires-Root: no
 
-Package: template-repository
+Package: wf-shell
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: GTK3-based panel for the Wayfire compositor
+    wf-shell is a repository which contains the various components needed to built
+ a fully functional DE based around wayfire. Currently it has only a GTK-based panel
+ and background client.
